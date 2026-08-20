@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Diario del Salón - Noticias de Hoy</title>
+    <title>Andino News 5.a - El Diario del Salón</title>
     <style>
-        /* Estilos generales */
+        /* ==========================================
+           ESTILOS CSS (DISEÑO Y COLORES)
+           ========================================== */
         body {
             font-family: 'Georgia', serif;
             background-color: #f4f4f4;
@@ -27,6 +29,20 @@
             padding-bottom: 15px;
             margin-bottom: 20px;
         }
+        /* Alineación mágica: Pone el logo al lado del título */
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px; /* Espacio entre el logo y el texto */
+            margin-bottom: 10px;
+        }
+        /* Ajuste del tamaño de tu logotipo redondo */
+        .logo-periodico {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+        }
         header h1 {
             font-size: 3.5rem;
             margin: 0;
@@ -42,34 +58,21 @@
             font-size: 0.9rem;
             font-weight: bold;
         }
-        /* Diseño de columnas al estilo prensa */
+        /* Columnas del periódico */
         .main-content {
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 20px;
         }
-        @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-        }
-        /* Noticia Principal */
         .noticia-principal {
             border-right: 1px solid #ddd;
             padding-right: 20px;
-        }
-        @media (max-width: 768px) {
-            .noticia-principal {
-                border-right: none;
-                padding-right: 0;
-            }
         }
         .noticia-principal h2 {
             font-size: 2.2rem;
             margin-top: 0;
             line-height: 1.1;
         }
-        /* Noticias Secundarias */
         .noticia-secundaria {
             margin-bottom: 20px;
             padding-bottom: 15px;
@@ -92,14 +95,32 @@
             border-top: 1px solid #333;
             font-size: 0.85rem;
         }
+        /* Diseño adaptativo para celulares */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .noticia-principal {
+                border-right: none;
+                padding-right: 0;
+            }
+            .header-top {
+                flex-direction: column; /* Pone el logo arriba en celulares */
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- Encabezado del Periódico -->
+    <!-- Encabezado con tu Logotipo al lado del Título -->
     <header>
-        <h1>EL SALÓN INFORMATIVO</h1>
+        <div class="header-top">
+            <!-- Jala automáticamente tu archivo logo.png -->
+            <img src="logo.png" alt="Logo Andino News" class="logo-periodico">
+            <h1>ANDINO NEWS 5.a</h1>
+        </div>
         <div class="sub-header">
             <span>Año I - Edición N° 1</span>
             <span>Miércoles, 19 de Agosto de 2026</span>
@@ -120,7 +141,6 @@
 
         <!-- Columna Secundaria (Derecha) -->
         <aside class="noticias-secundarias">
-            
             <div class="noticia-secundaria">
                 <h3>Transportistas convocan a paro</h3>
                 <p>Gremios de transporte de Lima y Callao anunciaron una paralización programada para el próximo 25 de agosto si las autoridades del Gobierno no atienden sus reclamos sobre la seguridad en las rutas.</p>
@@ -135,7 +155,6 @@
                 <h3>Aprobación de nuevas escalas legales</h3>
                 <p>El Diario Oficial El Peruano publicó hoy las nuevas normativas y escalas remunerativas aprobadas para el personal del sector público y el sector jurisdiccional del país.</p>
             </div>
-
         </aside>
     </main>
 
@@ -147,3 +166,7 @@
 
 </body>
 </html>
+
+      
+     
+
