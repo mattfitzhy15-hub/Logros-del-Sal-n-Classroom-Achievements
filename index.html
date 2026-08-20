@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Salón Informativo - El Diario del Salón</title>
+    <title>The Information Room - The Classroom Daily</title>
     <style>
         /* ==========================================
-           ESTILOS CSS (DISEÑO Y COLORES)
+           CSS STYLES (DESIGN AND COLORS)
            ========================================== */
         body {
             font-family: 'Georgia', serif;
@@ -22,22 +22,22 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        /* Encabezado del Periódico */
+        /* Newspaper Header */
         header {
             text-align: center;
             border-bottom: 4px double #333;
             padding-bottom: 15px;
             margin-bottom: 20px;
         }
-        /* Alineación: Pone el logo al lado del título */
+        /* Alignment: Places the logo next to the title */
         .header-top {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 25px; /* Espacio entre el logo y el texto */
+            gap: 25px; /* Space between logo and text */
             margin-bottom: 10px;
         }
-        /* Ajuste del tamaño de tu logotipo redondo */
+        /* Logo size adjustment */
         .logo-periodico {
             width: 90px;
             height: 90px;
@@ -58,7 +58,7 @@
             font-size: 0.9rem;
             font-weight: bold;
         }
-        /* Columnas del periódico */
+        /* Newspaper Columns */
         .main-content {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -95,7 +95,7 @@
             border-top: 1px solid #333;
             font-size: 0.85rem;
         }
-        /* Diseño adaptativo para celulares */
+        /* Responsive design for mobile devices */
         @media (max-width: 768px) {
             .main-content {
                 grid-template-columns: 1fr;
@@ -105,7 +105,7 @@
                 padding-right: 0;
             }
             .header-top {
-                flex-direction: column; /* Pone el logo arriba en celulares */
+                flex-direction: column; /* Places logo on top for mobile */
                 text-align: center;
             }
         }
@@ -114,55 +114,55 @@
 <body>
 
 <div class="container">
-    <!-- Encabezado con tu Logotipo al lado del Título -->
+    <!-- Header with Logo and Title -->
     <header>
         <div class="header-top">
-            <!-- Jala tu archivo logo.png -->
-            <img src="logo.png" alt="Logo El Salón Informativo" class="logo-periodico">
-            <h1>EL SALÓN INFORMATIVO</h1>
+            <img src="logo.png" alt="The Information Room Logo" class="logo-periodico">
+            <h1>THE INFORMATION ROOM</h1>
         </div>
         <div class="sub-header">
-            <span>Año I - Edición N° 1</span>
-            <span>Miércoles, 19 de Agosto de 2026</span>
-            <span>Precio: Gratis</span>
+            <span>Year I - Edition No. 1</span>
+            <span>Thursday, August 20, 2026</span>
+            <span>Price: Free</span>
         </div>
     </header>
 
-    <!-- Cuerpo de las Noticias -->
+    <!-- News Body -->
     <main class="main-content">
         
-        <!-- Columna Principal (Izquierda) -->
+        <!-- Main Column (Left) -->
         <section class="noticia-principal">
-            <h2>Sismo de magnitud 4.8 sacude Lima durante la madrugada</h2>
-            <p><strong>LURÍN, LIMA.</strong> Un movimiento telúrico sorprendió a los ciudadanos a las 5:28 a.m. de hoy miércoles. El Instituto Geofísico del Perú (IGP) detalló que el epicentro se ubicó en el mar, a 42 kilómetros al suroeste del distrito de Lurín.</p>
-            <p>La Dirección de Hidrografía y Navegación de la Marina de Guerra del Perú actuó de forma inmediata y descartó cualquier alerta de tsunami en el litoral de la costa central. Hasta el momento, las autoridades de Defensa Civil informaron que no se registran daños materiales de gravedad ni pérdidas humanas.</p>
-            <p class="destacado">⚠️ <strong>Recordatorio escolar:</strong> Ante la actividad sísmica habitual del país, se recomienda a las familias revisar las rutas de evacuación del hogar y verificar que la mochila de emergencia contenga agua, alimentos no perecederos y un botiquín básico.</p>
+            <h2>Government Requests Special Legislative Powers to Overhaul Tax System</h2>
+            <p><strong>LIMA, PERU.</strong> Prime Minister Luis Galarreta announced today that the Executive branch will formally request legislative powers from Congress [El Peruano 1]. The initiative aims to completely simplify the country's tax regimes, combat widespread tax evasion, and modernize customs operations [El Peruano 1].</p>
+            <p>According to official sources, this reform seeks to reactivate national economic growth by formalizing thousands of small businesses [El Peruano 1]. The government expects the proposal to be debated in the upcoming congressional sessions to address critical fiscal vulnerabilities before the end of the quarter [El Peruano 1].</p>
+            <p class="destacado">⚠️ <strong>Economic Impact:</strong> Experts suggest that streamlining the tax code could boost foreign investments and simplify monthly tax declarations for local entrepreneurs [El Peruano 1].</p>
         </section>
 
-        <!-- Columna Secundaria (Derecha) -->
+        <!-- Secondary Column (Right) -->
         <aside class="noticias-secundarias">
             <div class="noticia-secundaria">
-                <h3>Transportistas convocan a paro</h3>
-                <p>Gremios de transporte de Lima y Callao anunciaron una paralización programada para el próximo 25 de agosto si las autoridades del Gobierno no atienden sus reclamos sobre la seguridad en las rutas.</p>
+                <h3>Supreme Court Limits Public Records Access</h3>
+                <p>A new legal ruling established today restricts the broad public release of criminal records, enforcing strict data confidentiality guidelines across government agencies [El Peruano 3].</p>
             </div>
 
             <div class="noticia-secundaria">
-                <h3>Alerta por déficit hídrico en la Amazonía</h3>
-                <p>Las autoridades meteorológicas activaron decretos de emergencia debido al impacto del fenómeno El Niño 2026-2027 en las regiones selváticas, advirtiendo sobre el riesgo latente de incendios forestales por sequía.</p>
+                <h3>JNE Approves New Voting Rules</h3>
+                <p>The National Jury of Elections (JNE) officially published a new resolution to regulate candidate registrations and resolve inner-party disputes for the upcoming electoral cycle [El Peruano 2].</p>
             </div>
 
             <div class="noticia-secundaria">
-                <h3>Aprobación de nuevas escalas legales</h3>
-                <p>El Diario Oficial El Peruano publicó hoy las nuevas normativas y escalas remunerativas aprobadas para el personal del sector público y el sector jurisdiccional del país.</p>
+                <h3>Lima Transportation Updates</h3>
+                <p>The Ministry of Transportation confirmed new infrastructure budgets aimed at resolving heavy congestion points on the main highways connecting Lima with central regions [El Peruano 4].</p>
             </div>
         </aside>
     </main>
 
-    <!-- Pie de página -->
+    <!-- Footer -->
     <footer>
-        <p>© 2026 Proyecto escolar creado en la clase de Informática con GitHub Pages.</p>
+        <p>© 2026 School project created in Computing Class using GitHub Pages.</p>
     </footer>
 </div>
 
 </body>
 </html>
+
