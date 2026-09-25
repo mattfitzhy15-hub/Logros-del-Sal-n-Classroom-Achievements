@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Salón Informativo - Especial de Prevención Sísmica</title>
+    <title>The Information Room - Earthquake Prevention Special</title>
     <style>
         /* ==========================================
-           ESTILOS CSS (DISEÑO Y COLORES)
            CSS STYLES (DESIGN AND COLORS)
            ========================================== */
         body {
@@ -23,7 +22,7 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        /* Encabezado del Periódico */
+        /* Newspaper Header */
         header {
             text-align: center;
             border-bottom: 4px double #333;
@@ -58,7 +57,7 @@
             font-weight: bold;
         }
         
-        /* Estructura asimétrica: 70% Prevención Sísmica y 30% Noticias */
+        /* Layout: 70% Earthquake Prevention & 30% General News */
         .main-content {
             display: grid;
             grid-template-columns: 2.2fr 1fr;
@@ -72,7 +71,7 @@
             padding-left: 5px;
         }
         
-        /* Títulos */
+        /* Impact Headlines */
         h2.principal-titulo {
             font-size: 2rem;
             color: #b30000;
@@ -92,7 +91,7 @@
             letter-spacing: 1px;
         }
         
-        /* Estilos de bloques educativos */
+        /* Educational Blocks */
         .bloque-educativo {
             background-color: #fdfdfd;
             border: 1px solid #ddd;
@@ -115,7 +114,7 @@
             margin-bottom: 8px;
         }
 
-        /* Ficha Técnica de la Mochila */
+        /* Emergency Kit Tech Box */
         .caja-mochila {
             background-color: #fffaf0;
             border-left: 5px solid #e67e22;
@@ -134,7 +133,7 @@
             font-size: 1rem;
         }
 
-        /* Pie de página */
+        /* Footer */
         footer {
             margin-top: 40px;
             text-align: center;
@@ -143,7 +142,7 @@
             padding-top: 15px;
         }
 
-        /* Responsive para celulares */
+        /* Responsive Design */
         @media (max-width: 850px) {
             .main-content {
                 grid-template-columns: 1fr;
@@ -165,78 +164,80 @@
 <body>
 
 <div class="container">
-    <!-- Encabezado del Periódico -->
+    <!-- Newspaper Header -->
     <header>
         <div class="header-top">
-            <img src="logo.png" alt="Logo El Salón Informativo" class="logo-periodico">
-            <h1>EL SALÓN INFORMATIVO / THE INFORMATION ROOM</h1>
+            <img src="logo.png" alt="The Information Room Logo" class="logo-periodico">
+            <h1>THE INFORMATION ROOM</h1>
             <img src="logo.png" alt="The Information Room Logo" class="logo-periodico">
         </div>
         <div class="sub-header">
-            <span>Año I - Edición N° 1</span>
-            <span>Jueves, 24 de Septiembre de 2026</span>
-            <span>Precio: Gratis / Free</span>
+            <span>Year I - Edition No. 1</span>
+            <span>Thursday, September 24, 2026</span>
+            <span>Price: Free</span>
         </div>
     </header>
 
     <main class="main-content">
 
-        <!-- BLOQUE PRINCIPAL (IZQUIERDA): PREVENCIÓN SÍSMICA Y MOCHILAS -->
+        <!-- MAIN BLOCK (LEFT): EARTHQUAKE PREVENTION & EMERGENCY KITS -->
         <section class="columna-terremotos">
-            <h2 class="principal-titulo">🚨 GUÍA DE SUPERVIVENCIA: ¿Cómo prevenir accidentes y prepararse ante un terremoto?</h2>
+            <h2 class="principal-titulo">🚨 SURVIVAL GUIDE: How to Prevent Accidents and Prepare for an Earthquake</h2>
             
             <div class="noticia">
-                <p><strong>LIMA.</strong> Debido a que el Perú está ubicado geográficamente sobre el Cinturón de Fuego del Pacífico [El Peruano], el Instituto Geofísico del Perú (IGP) y el INDECI recuerdan que los terremotos no se pueden predecir, pero sus consecuencias trágicas sí se pueden evitar mediante la prevención activa y la educación familiar [El Peruano, Infobae].</p>
+                <p><strong>LIMA.</strong> Due to Peru's geographical location on the Pacific Ring of Fire [El Peruano], the Geophysical Institute of Peru (IGP) and INDECI emphasize that while earthquakes cannot be predicted, tragic consequences can be avoided through active prevention and family preparation [El Peruano, Infobae].</p>
             </div>
 
-            <!-- BLOQUE 1: CÓMO PREVENIR -->
+            <!-- BLOCK 1: HOW TO PREVENT -->
             <div class="bloque-educativo">
-                <h3>📌 Acciones clave para prevenir accidentes</h3>
+                <h3>📌 Key Actions to Prevent Accidents</h3>
                 <ol>
-                    <li><strong>Identifica las zonas seguras:</strong> Reconoce las columnas, muros de carga y áreas estructurales firmes tanto dentro de tu casa como en el colegio o trabajo.</li>
-                    <li><strong>Despeja las rutas de evacuación:</strong> Mantén los pasadizos, puertas y escaleras completamente libres de muebles, macetas o juguetes que puedan obstruir el paso.</li>
-                    <li><strong>Asegura los objetos pesados:</strong> Ancla firmemente a la pared los roperos, estantes, repisas y televisores para evitar que caigan encima de alguien durante el sacudón.</li>
-                    <li><strong>Organiza un simulacro familiar:</strong> Asigna roles específicos (quién abre la puerta, quién ayuda a las mascotas o adultos mayores) y define un punto de encuentro exterior seguro.</li>
+                    <li><strong>Identify Safe Zones:</strong> Locate columns, load-bearing walls, and strong structural areas inside your home, school, or workplace.</li>
+                    <li><strong>Clear Evacuation Routes:</strong> Keep corridors, doors, and stairs completely free of furniture, heavy pots, or toys that could block your path.</li>
+                    <li><strong>Secure Heavy Objects:</strong> Firmly anchor wardrobes, bookshelves, shelves, and television sets to the wall to prevent them from falling during shaking.</li>
+                    <li><strong>Organize a Family Drill:</strong> Assign specific roles (who opens the door, who assists pets or elderly relatives) and define a safe outdoor meeting point.</li>
                 </ol>
             </div>
 
-            <!-- BLOQUE 2: LA MOCHILA DE EMERGENCIA -->
+            <!-- BLOCK 2: THE EMERGENCY GO-BAG -->
             <div class="bloque-educativo">
-                <h3>🎒 ¿Cómo armar una Mochila de Emergencia?</h3>
-                <p>La mochila debe colocarse en un lugar de fácil acceso cerca de la puerta de salida y su contenido debe estar calculado para abastecer a dos personas durante las primeras 24 horas [Infobae].</p>
+                <h3>🎒 How to Build an Emergency Go-Bag</h3>
+                <p>The emergency backpack should be placed in an easily accessible location near the exit door, and its contents should be calculated to sustain two people during the first 24 hours [Infobae].</p>
                 
                 <div class="caja-mochila">
-                    <h4>Artículos indispensables que debe contener:</h4>
+                    <h4>Indispensable Items Your Backpack Must Contain:</h4>
                     <ul>
-                        <li><strong>Artículos de higiene:</strong> Gel antibacterial, papel higiénico, toallas de mano y pañales (si hay bebés).</li>
-                        <li><strong>Botiquín de primeros auxilios:</strong> Alcohol, gasas, vendas, esparadrapo y medicamentos específicos si algún familiar sufre de enfermedades crónicas.</li>
-                        <li><strong>Bebidas y alimentos:</strong> Agua embotellada sin gas y comida enlatada no perecible (atún, menestras) con abrelatas manual.</li>
-                        <li><strong>Abrigo y herramientas:</strong> Una manta polar, linterna de mano, radio portátil a pilas (para escuchar las noticias) y silbato para emergencias.</li>
-                        <li><strong>Elementos de comunicación:</strong> Duplicado de las llaves de la casa, dinero en efectivo (monedas) y copias de los DNI metidas en bolsas plásticas selladas.</li>
+                        <li><strong>Hygiene Supplies:</strong> Antibacterial gel, toilet paper, hand towels, and wet wipes.</li>
+                        <li><strong>First Aid Kit:</strong> Antiseptic alcohol, sterile gauze, bandages, medical tape, and chronic prescription medications for family members.</li>
+                        <li><strong>Food and Water:</strong> Still bottled water and non-perishable canned food (tuna, beans) with a manual can opener.</li>
+                        <li><strong>Warmth and Tools:</strong> A fleece blanket, flashlight, portable battery-powered radio (to listen to emergency updates), and a whistle.</li>
+                        <li><strong>Communication and ID:</strong> Duplicate house keys, cash (coins), and plastic-sealed copies of national identification cards (DNI).</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Reporte de monitoreo del día -->
+            <!-- Seismic Monitoring Report -->
             <div class="noticia">
-                <h3>Monitoreo sísmico del día</h3>
-                <p>Equipos de brigadistas continúan supervisando las estructuras en el sur del país tras el sismo de 7.2 registrado al norte de Coracora [Facebook]. Paralelamente, el IGP reportó hoy sismos menores en Zorritos (Tumbes) y Arequipa, recordando que la vigilancia volcánica y tectónica es ininterrumpida [El Peruano, Infobae].</p>
+                <h3>Seismic Activity Update</h3>
+                <p>Civil Defense brigades continue conducting structural assessments in southern Peru following the magnitude 7.2 earthquake recorded north of Coracora [Facebook]. Simultaneously, the IGP reported minor tremors in Zorritos (Tumbes) and Arequipa today, reminding citizens that tectonic and volcanic monitoring remains uninterrupted [El Peruano, Infobae].</p>
             </div>
         </section>
 
-
-        <!-- BLOQUE SECUNDARIO (DERECHA): NOTICIAS DIARIAS GENERALES -->
+        <!-- SECONDARY BLOCK (RIGHT): GENERAL PERUVIAN AND GLOBAL NEWS -->
         <aside class="columna-secundaria">
-            <h2 class="seccion-titulo">Noticias del Perú</h2>
+            <h2 class="seccion-titulo">Peru News</h2>
             <div class="noticia" style="font-size: 0.95rem;">
-                <h3>Clausuran Arena 1 en Lima</h3>
-                <p>La Municipalidad de San Miguel cerró el recinto por fallas de seguridad, obligando a cancelar la segunda fecha del show de Robbie Williams de este jueves [Infobae].</p>
+                <h3>Arena 1 Venue Shut Down in Lima</h3>
+                <p>The Municipality of San Miguel ordered the immediate closure of the facility due to severe safety failures, forcing the cancellation of Robbie Williams' second concert scheduled for tonight [Infobae].</p>
             </div>
             <div class="noticia" style="font-size: 0.95rem;">
-                <h3>Moneda conmemorativa del BCRP</h3>
-                <p>Pusieron en circulación una nueva moneda de plata de S/ 1.00 por el bicentenario del Ministerio de Justicia [El Peruano]. El dólar cotiza estable en S/ 3.39 [La República].</p>
+                <h3>BCRP Releases New Silver Coin</h3>
+                <p>The Central Reserve Bank issued a commemorative 1.00 Sol silver coin marking the bicentennial of the Ministry of Justice [El Peruano]. Meanwhile, the US dollar remains steady at S/ 3.39 [La República].</p>
             </div>
 
             <h2 class="seccion-titulo" style="background-color: #003366;">World News</h2>
             <div class="noticia" style="font-size: 0.95rem;">
+                <h3>Fujimori at New York Stock Exchange</h3>
+                <p>President Keiko Fujimori officially led the iconic closing bell ceremony at the NYSE today to promote stable constitutional protections for global private investments [El Peruano].</p>
+            </div>
 
