@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Information Room - The Classroom Daily</title>
+    <title>El Salón Informativo - Especial de Prevención Sísmica</title>
     <style>
         /* ==========================================
+           ESTILOS CSS (DISEÑO Y COLORES)
            CSS STYLES (DESIGN AND COLORS)
            ========================================== */
         body {
@@ -16,38 +17,36 @@
             padding: 20px;
         }
         .container {
-            max-width: 1000px;
+            max-width: 1150px;
             margin: 0 auto;
             background: #fff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        /* Newspaper Header */
+        /* Encabezado del Periódico */
         header {
             text-align: center;
             border-bottom: 4px double #333;
             padding-bottom: 15px;
             margin-bottom: 20px;
         }
-        /* Alignment: Places the logo next to the title */
         .header-top {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 25px; /* Space between logo and text */
+            gap: 25px;
             margin-bottom: 10px;
         }
-        /* Logo size adjustment */
         .logo-periodico {
             width: 90px;
             height: 90px;
-            object-fit: contain;
+            border-radius: 50%;
+            object-fit: cover;
         }
-        header h1 {
-            font-size: 3.5rem;
+        h1 {
+            font-size: 2.4rem;
             margin: 0;
-            text-transform: uppercase;
-            letter-spacing: -1px;
+            letter-spacing: 1px;
         }
         .sub-header {
             display: flex;
@@ -58,54 +57,106 @@
             font-size: 0.9rem;
             font-weight: bold;
         }
-        /* Newspaper Columns */
+        
+        /* Estructura asimétrica: 70% Prevención Sísmica y 30% Noticias */
         .main-content {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
+            grid-template-columns: 2.2fr 1fr;
+            gap: 30px;
         }
-        .noticia-principal {
-            border-right: 1px solid #ddd;
+        .columna-terremotos {
+            border-right: 1px solid #ccc;
             padding-right: 20px;
         }
-        .noticia-principal h2 {
-            font-size: 2.2rem;
+        .columna-secundaria {
+            padding-left: 5px;
+        }
+        
+        /* Títulos */
+        h2.principal-titulo {
+            font-size: 2rem;
+            color: #b30000;
             margin-top: 0;
-            line-height: 1.1;
+            line-height: 1.3;
+            border-bottom: 2px solid #b30000;
+            padding-bottom: 10px;
         }
-        .noticia-secundaria {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        .noticia-secundaria h3 {
-            font-size: 1.3rem;
-            margin: 0 0 10px 0;
-        }
-        .destacado {
-            background: #fff3cd;
-            padding: 10px;
-            border-left: 4px solid #ffc107;
-            font-size: 0.95rem;
-        }
-        footer {
+        h2.seccion-titulo {
+            font-size: 1.2rem;
             text-align: center;
-            margin-top: 30px;
-            padding-top: 15px;
+            background-color: #333;
+            color: #fff;
+            padding: 6px;
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Estilos de bloques educativos */
+        .bloque-educativo {
+            background-color: #fdfdfd;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+        .bloque-educativo h3 {
+            margin-top: 0;
+            color: #b30000;
+            font-size: 1.4rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .bloque-educativo ul, .bloque-educativo ol {
+            padding-left: 20px;
+            line-height: 1.6;
+        }
+        .bloque-educativo li {
+            margin-bottom: 8px;
+        }
+
+        /* Ficha Técnica de la Mochila */
+        .caja-mochila {
+            background-color: #fffaf0;
+            border-left: 5px solid #e67e22;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .caja-mochila h4 {
+            margin: 0 0 10px 0;
+            color: #e67e22;
+            font-size: 1.1rem;
+        }
+
+        .noticia p {
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 1rem;
+        }
+
+        /* Pie de página */
+        footer {
+            margin-top: 40px;
+            text-align: center;
             border-top: 1px solid #333;
             font-size: 0.85rem;
+            padding-top: 15px;
         }
-        /* Responsive design for mobile devices */
-        @media (max-width: 768px) {
+
+        /* Responsive para celulares */
+        @media (max-width: 850px) {
             .main-content {
                 grid-template-columns: 1fr;
             }
-            .noticia-principal {
+            .columna-terremotos {
                 border-right: none;
                 padding-right: 0;
+                border-bottom: 2px solid #ccc;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
             }
             .header-top {
-                flex-direction: column; /* Places logo on top for mobile */
+                flex-direction: column;
                 text-align: center;
             }
         }
@@ -114,55 +165,78 @@
 <body>
 
 <div class="container">
-    <!-- Header with Logo and Title -->
+    <!-- Encabezado del Periódico -->
     <header>
         <div class="header-top">
+            <img src="logo.png" alt="Logo El Salón Informativo" class="logo-periodico">
+            <h1>EL SALÓN INFORMATIVO / THE INFORMATION ROOM</h1>
             <img src="logo.png" alt="The Information Room Logo" class="logo-periodico">
-            <h1>THE INFORMATION ROOM</h1>
         </div>
         <div class="sub-header">
-            <span>Year I - Edition No. 1</span>
-            <span>Thursday, August 20, 2026</span>
-            <span>Price: Free</span>
+            <span>Año I - Edición N° 1</span>
+            <span>Jueves, 24 de Septiembre de 2026</span>
+            <span>Precio: Gratis / Free</span>
         </div>
     </header>
 
-    <!-- News Body -->
     <main class="main-content">
-        
-        <!-- Main Column (Left) -->
-        <section class="noticia-principal">
-            <h2>Government Requests Special Legislative Powers to Overhaul Tax System</h2>
-            <p><strong>LIMA, PERU.</strong> Prime Minister Luis Galarreta announced today that the Executive branch will formally request legislative powers from Congress [El Peruano 1]. The initiative aims to completely simplify the country's tax regimes, combat widespread tax evasion, and modernize customs operations [El Peruano 1].</p>
-            <p>According to official sources, this reform seeks to reactivate national economic growth by formalizing thousands of small businesses [El Peruano 1]. The government expects the proposal to be debated in the upcoming congressional sessions to address critical fiscal vulnerabilities before the end of the quarter [El Peruano 1].</p>
-            <p class="destacado">⚠️ <strong>Economic Impact:</strong> Experts suggest that streamlining the tax code could boost foreign investments and simplify monthly tax declarations for local entrepreneurs [El Peruano 1].</p>
+
+        <!-- BLOQUE PRINCIPAL (IZQUIERDA): PREVENCIÓN SÍSMICA Y MOCHILAS -->
+        <section class="columna-terremotos">
+            <h2 class="principal-titulo">🚨 GUÍA DE SUPERVIVENCIA: ¿Cómo prevenir accidentes y prepararse ante un terremoto?</h2>
+            
+            <div class="noticia">
+                <p><strong>LIMA.</strong> Debido a que el Perú está ubicado geográficamente sobre el Cinturón de Fuego del Pacífico [El Peruano], el Instituto Geofísico del Perú (IGP) y el INDECI recuerdan que los terremotos no se pueden predecir, pero sus consecuencias trágicas sí se pueden evitar mediante la prevención activa y la educación familiar [El Peruano, Infobae].</p>
+            </div>
+
+            <!-- BLOQUE 1: CÓMO PREVENIR -->
+            <div class="bloque-educativo">
+                <h3>📌 Acciones clave para prevenir accidentes</h3>
+                <ol>
+                    <li><strong>Identifica las zonas seguras:</strong> Reconoce las columnas, muros de carga y áreas estructurales firmes tanto dentro de tu casa como en el colegio o trabajo.</li>
+                    <li><strong>Despeja las rutas de evacuación:</strong> Mantén los pasadizos, puertas y escaleras completamente libres de muebles, macetas o juguetes que puedan obstruir el paso.</li>
+                    <li><strong>Asegura los objetos pesados:</strong> Ancla firmemente a la pared los roperos, estantes, repisas y televisores para evitar que caigan encima de alguien durante el sacudón.</li>
+                    <li><strong>Organiza un simulacro familiar:</strong> Asigna roles específicos (quién abre la puerta, quién ayuda a las mascotas o adultos mayores) y define un punto de encuentro exterior seguro.</li>
+                </ol>
+            </div>
+
+            <!-- BLOQUE 2: LA MOCHILA DE EMERGENCIA -->
+            <div class="bloque-educativo">
+                <h3>🎒 ¿Cómo armar una Mochila de Emergencia?</h3>
+                <p>La mochila debe colocarse en un lugar de fácil acceso cerca de la puerta de salida y su contenido debe estar calculado para abastecer a dos personas durante las primeras 24 horas [Infobae].</p>
+                
+                <div class="caja-mochila">
+                    <h4>Artículos indispensables que debe contener:</h4>
+                    <ul>
+                        <li><strong>Artículos de higiene:</strong> Gel antibacterial, papel higiénico, toallas de mano y pañales (si hay bebés).</li>
+                        <li><strong>Botiquín de primeros auxilios:</strong> Alcohol, gasas, vendas, esparadrapo y medicamentos específicos si algún familiar sufre de enfermedades crónicas.</li>
+                        <li><strong>Bebidas y alimentos:</strong> Agua embotellada sin gas y comida enlatada no perecible (atún, menestras) con abrelatas manual.</li>
+                        <li><strong>Abrigo y herramientas:</strong> Una manta polar, linterna de mano, radio portátil a pilas (para escuchar las noticias) y silbato para emergencias.</li>
+                        <li><strong>Elementos de comunicación:</strong> Duplicado de las llaves de la casa, dinero en efectivo (monedas) y copias de los DNI metidas en bolsas plásticas selladas.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Reporte de monitoreo del día -->
+            <div class="noticia">
+                <h3>Monitoreo sísmico del día</h3>
+                <p>Equipos de brigadistas continúan supervisando las estructuras en el sur del país tras el sismo de 7.2 registrado al norte de Coracora [Facebook]. Paralelamente, el IGP reportó hoy sismos menores en Zorritos (Tumbes) y Arequipa, recordando que la vigilancia volcánica y tectónica es ininterrumpida [El Peruano, Infobae].</p>
+            </div>
         </section>
 
-        <!-- Secondary Column (Right) -->
-        <aside class="noticias-secundarias">
-            <div class="noticia-secundaria">
-                <h3>Supreme Court Limits Public Records Access</h3>
-                <p>A new legal ruling established today restricts the broad public release of criminal records, enforcing strict data confidentiality guidelines across government agencies [El Peruano 3].</p>
+
+        <!-- BLOQUE SECUNDARIO (DERECHA): NOTICIAS DIARIAS GENERALES -->
+        <aside class="columna-secundaria">
+            <h2 class="seccion-titulo">Noticias del Perú</h2>
+            <div class="noticia" style="font-size: 0.95rem;">
+                <h3>Clausuran Arena 1 en Lima</h3>
+                <p>La Municipalidad de San Miguel cerró el recinto por fallas de seguridad, obligando a cancelar la segunda fecha del show de Robbie Williams de este jueves [Infobae].</p>
+            </div>
+            <div class="noticia" style="font-size: 0.95rem;">
+                <h3>Moneda conmemorativa del BCRP</h3>
+                <p>Pusieron en circulación una nueva moneda de plata de S/ 1.00 por el bicentenario del Ministerio de Justicia [El Peruano]. El dólar cotiza estable en S/ 3.39 [La República].</p>
             </div>
 
-            <div class="noticia-secundaria">
-                <h3>JNE Approves New Voting Rules</h3>
-                <p>The National Jury of Elections (JNE) officially published a new resolution to regulate candidate registrations and resolve inner-party disputes for the upcoming electoral cycle [El Peruano 2].</p>
-            </div>
-
-            <div class="noticia-secundaria">
-                <h3>Lima Transportation Updates</h3>
-                <p>The Ministry of Transportation confirmed new infrastructure budgets aimed at resolving heavy congestion points on the main highways connecting Lima with central regions [El Peruano 4].</p>
-            </div>
-        </aside>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 School project created in Computing Class using GitHub Pages.</p>
-    </footer>
-</div>
-
-</body>
-</html>
+            <h2 class="seccion-titulo" style="background-color: #003366;">World News</h2>
+            <div class="noticia" style="font-size: 0.95rem;">
 
